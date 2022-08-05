@@ -51,7 +51,12 @@ class BlogModel extends Model
         $this->key_unset_recursive( $tree, 'id' );
         $this->key_unset_recursive( $tree, 'parent_id' );
 
-        echo json_encode( $tree, JSON_PRETTY_PRINT );
+        $data = [
+            "message" => "Get Data Success",
+            "data" => $tree
+        ];
+
+        echo json_encode($data);
     }
         // dd($result);
     }
